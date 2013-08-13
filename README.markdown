@@ -1,12 +1,11 @@
-# blank
+# RRD
 
-This is a blank puppet module.
+This is a Puppet Module for installing and configuring the [Round Robin Database](http://oss.oetiker.ch/rrdtool/) tools, cache, and bindings.
 
-*NOTE:* Check README1st.markdown for usage of the blank puppet module template.
 
-# Licensing
+# Dependencies
 
-Update your license details here.
+* [stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
 
 # Attribution
 
