@@ -32,7 +32,7 @@
 # [Remember: No empty lines between comments and class definition]
 class rrd::cache (
   $ensure           = 'installed',
-  $service          = 'enabled',
+  $service          = 'running',
   $listen           = $rrd::params::cache_listen,
   $gid              = undef,
   $journal_dir      = $rrd::params::cache_journal_dir,
@@ -53,10 +53,10 @@ class rrd::cache (
 
 
   case $service {
-    'absent','stopped':{
+    'stopped':{
       $service_enable   = false
     }
-    default:{
+    'running':{
       $service_enable   = true
     }
   }
