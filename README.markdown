@@ -2,6 +2,8 @@
 
 This is a Puppet Module for installing and configuring the [Round Robin Database](http://oss.oetiker.ch/rrdtool/) tools, cache, and bindings.
 
+[![Build Status](https://travis-ci.org/nesi/rrd.png)](https://travis-ci.org/nesi/rrd)
+
 ## Purpose
 
 *Why should there be a Puppet module for installing something as simple as RRD?*
