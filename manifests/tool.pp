@@ -1,8 +1,9 @@
-# Class: rrd
+# Class: rrd::tool
 #
-# This module manages the core rrd libraries. It should be used when
-# only the installation of the librarie are required (e.g. when
-# installing the Ganglia metadata daemon `gmetad`)
+# This module manages the rrd tools packages (rrdtool).
+#
+# Note: This class does not require the rrd class, as the rrd
+# libraries will be installed as dependencies.
 #
 # Parameters:
 #
@@ -11,7 +12,7 @@
 # Requires:
 #
 # Sample Usage:
-#   include rrd
+#   include rrd::tool
 
 # This file is part of the rrd Puppet module.
 #
@@ -29,12 +30,12 @@
 #     along with the rrd Puppet module.  If not, see <http://www.gnu.org/licenses/>.
 
 # [Remember: No empty lines between comments and class definition]
-class rrd (
+class rrd::tool (
   $ensure = 'present'
 ) inherits rrd::params {
 
-  package{$rrd::params::lib_package:
-    ensure => $ensure
+  package{$rrd::params::tool_package:
+    ensure => $ensure,
   }
 
 }
