@@ -2,7 +2,7 @@
 
 This is a Puppet Module for installing and configuring the [Round Robin Database](http://oss.oetiker.ch/rrdtool/) tools, cache, and bindings.
 
-[![Build Status](https://travis-ci.org/nesi/rrd.png)](https://travis-ci.org/nesi/rrd)
+[![Build Status](https://travis-ci.org/nesi/puppet-rrd.png)](https://travis-ci.org/nesi/puppet-rrd)
 
 ## Purpose
 
