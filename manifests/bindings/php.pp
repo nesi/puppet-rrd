@@ -31,7 +31,7 @@
 
 # [Remember: No empty lines between comments and class definition]
 class rrd::bindings::php (
-  $ensure = 'present'
+  $ensure = 'installed'
 ) inherits rrd::params {
 
   package{$rrd::params::php_packages:

@@ -7,6 +7,14 @@ This is a Puppet Module for installing and configuring the [Round Robin Database
 
 * [stdlib](https://github.com/puppetlabs/puppetlabs-stdlib)
 
+# References
+
+This module uses the following modules for inspiration and reused code:
+
+* [pari-/puppet-rrdcached](https://github.com/pari-/puppet-rrdcached)
+* [ScarceMedia/puppet-rrdtool](https://github.com/ScarceMedia/puppet-rrdtool)
+* [UCSD-ANF/puppet-rrdtool](https://github.com/UCSD-ANF/puppet-rrdtool)
+
 # Attribution
 
 This module is derived from the puppet-blank module by Aaron Hicks (aethylred@gmail.com)
