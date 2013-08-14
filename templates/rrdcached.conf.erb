@@ -12,7 +12,7 @@ DISABLE=<%= @service_enable ? '0' : '1' %>
 # options to be passed to rrdcached
 # (do not specify -p <pidfile> - this is handled by the init script)
 # default: see /etc/init.d/rrdcached
-OPTS="-t <%= @write_threads %> -w <%= @timeout %> -z <%= @delay %> -j <%= @journal_dir %> <%- if @gid -%>-s <%= @gid %><% end %> -m <%= @mode %> -l <%= @listen %> <%= @always_flush ? '-F' : '' %> -b <%= @jump_dir %>"
+OPTS="-t <%= @write_threads %> -w <%= @timeout %> -z <%= @delay %> -j <%= @journal_dir %> <%- if @gid -%>-s <%= @gid %><% end %> -l <%= @listen %> <%= @always_flush ? '-F' : '' %> -b <%= @jump_dir %>"
 
 # number of seconds to wait for rrdcached to shut down
 # (writing the data to disk may take some time;
