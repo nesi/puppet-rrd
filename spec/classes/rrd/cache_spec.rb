@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'rrd', :type => :class do
+describe 'rrd::cache', :type => :class do
   context "on a Debian OS" do
     let :facts do
       {
@@ -8,6 +8,6 @@ describe 'rrd', :type => :class do
       }
     end
     it {should include_class('rrd::params')}
-    it {should contain_package('librrd4')}
+    it {should contain_package('rrdcached')}
   end
 end
