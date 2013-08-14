@@ -22,4 +22,4 @@ MAXWAIT=<%= @maxwait %>
 
 # 0: do not enable core-files, 1: enable core-files ... if rrdcached crashes
 # default: 0
-ENABLE_COREFILES=<%= 2rrdcached::enable_corefiles ? '1' : '0' %>
+ENABLE_COREFILES=<%= @enable_corefiles ? '1' : '0' %>
