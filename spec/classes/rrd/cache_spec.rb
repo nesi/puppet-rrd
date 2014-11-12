@@ -7,7 +7,7 @@ describe 'rrd::cache', :type => :class do
         :osfamily               => 'Debian',
       }
     end
-    it {should include_class('rrd::params')}
+    it {should contain_class('rrd::params')}
     it {should contain_package('rrdcached')}
     it {should contain_service('rrdcached')}
     it {should contain_file('rrdcached.conf').with(

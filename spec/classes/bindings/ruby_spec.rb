@@ -7,7 +7,7 @@ describe 'rrd::bindings::ruby', :type => :class do
         :osfamily               => 'Debian',
       }
     end
-    it {should include_class('rrd::params')}
+    it {should contain_class('rrd::params')}
     it {should contain_package('librrd-ruby')}
   end
 end
