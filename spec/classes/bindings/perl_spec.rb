@@ -7,7 +7,7 @@ describe 'rrd::bindings::perl', :type => :class do
         :osfamily               => 'Debian',
       }
     end
-    it {should include_class('rrd::params')}
+    it {should contain_class('rrd::params')}
     it {should contain_package('librrds-perl')}
     it {should contain_package('librrdp-perl')}
     it {should contain_package('librrdtool-oo-perl')}
