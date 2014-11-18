@@ -58,6 +58,7 @@ The `rrd::cache` class has the following parameters:
 * *jump_dir*: Default is '/var/lib/rrdcached/db/'
 * *always_flush*: Default is true
 * *enable_corefiles*: Default is false
+* *restrict_writes*: Default is false
 * *maxwait*: Default is '30'
 * *conf_file*: The path to the `rrdcached` configuration file. Default is set approprately for operating system family.
 * *service_name*: The name of the `rrdcached` service. Default is set approprately for operating system family.

@@ -44,7 +44,8 @@ class rrd::cache (
   $enable_corefiles = $rrd::params::cache_enable_corefiles,
   $maxwait          = $rrd::params::cache_maxwait,
   $conf_file        = $rrd::params::cache_conf_file,
-  $service_name     = $rrd::params::cache_service
+  $service_name     = $rrd::params::cache_service,
+  $restrict_writes  = $rrd::params::restrict_writes,
 ) inherits rrd::params {
 
   package{$rrd::params::cache_package:
@@ -64,19 +65,19 @@ class rrd::cache (
   file{'rrdcached.conf':
     ensure  => file,
     path    => $conf_file,
-    mode    => 0644,
+    mode    => '0644',
     content => template('rrd/rrdcached.conf.erb'),
     notify  => Service['rrdcached'],
     require => Package[$rrd::params::cache_package],
   }
 
   service{'rrdcached':
-    name        => $service_name,
-    ensure      => $service,
-    enable      => $service_enable,
-    hasstatus   => true,
-    hasrestart  => true,
-    require     => Package[$rrd::params::cache_package],
+    ensure     => $service,
+    name       => $service_name,
+    enable     => $service_enable,
+    hasstatus  => true,
+    hasrestart => true,
+    require    => Package[$rrd::params::cache_package],
   }
 
 }

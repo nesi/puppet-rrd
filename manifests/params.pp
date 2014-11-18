@@ -8,6 +8,7 @@ class rrd::params {
   $cache_jump_dir         = '/var/lib/rrdcached/db/'
   $cache_always_flush     = true
   $cache_enable_corefiles = false
+  $cache_restrict_writes  = false
   $cache_maxwait          = '30'
 
   case $::osfamily {
