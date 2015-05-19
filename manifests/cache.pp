@@ -14,7 +14,7 @@ class rrd::cache (
   $maxwait          = $rrd::params::cache_maxwait,
   $conf_file        = $rrd::params::cache_conf_file,
   $service_name     = $rrd::params::cache_service,
-  $restrict_writes  = $rrd::params::restrict_writes,
+  $restrict_writes  = $rrd::params::cache_restrict_writes,
 ) inherits rrd::params {
 
   package{$rrd::params::cache_package:
