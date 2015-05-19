@@ -1,3 +1,4 @@
+# Defaults and variables
 class rrd::params {
 
   $cache_listen           = 'unix:/var/run/rrdcached.sock'
@@ -25,7 +26,7 @@ class rrd::params {
       $cache_service    = 'rrdcached'
     }
     default:{
-      fail{"The OS family ${::osfamily} is not supported by the rrd module.": }
+      fail("The OS family ${::osfamily} is not supported by the rrd module.")
     }
   }
 }

@@ -23,11 +23,11 @@ class rrd::cache (
 
 
   case $service {
-    'stopped':{
-      $service_enable   = false
-    }
     'running':{
       $service_enable   = true
+    }
+    default:{
+      $service_enable   = false
     }
   }
 

@@ -4,4 +4,4 @@ fixtures:
       repo: 'puppetlabs-stdlib'
       ref:  '4.6.0'
   symlinks:
-    ganglia: "#{source_dir}"
+    rrd: "#{source_dir}"
