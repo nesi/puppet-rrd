@@ -6,9 +6,9 @@ This is a Puppet Module for installing and configuring the [Round Robin Database
 
 ## Purpose
 
-*Why should there be a Puppet module for installing something as simple as RRD?*
+_Why should there be a Puppet module for installing something as simple as RRD?_
 
-This module is mostly to cover dependencies when creating Puppet Modules for *other* tools or application that use RRD (e.g. Ganglia, Nagios, Cacti, etc). RRD is an application in it's own right and should be described intependently.
+This module is mostly to cover dependencies when creating Puppet Modules for *other* tools or application that use RRD (e.g. Ganglia, Nagios, Cacti, etc). RRD is an application in it's own right and should be described independently.
 
 The objective with this module is to provide a safe and consistently managed installation of RRD that can be depended on by other services and applications.
 
@@ -44,7 +44,7 @@ For the default install of the RRD cache daemon (a.k.a. `rrdcached`):
 include rrd::cache
 ```
 
-## Detailed install of the RRD cache daemon
+## Customised install of the RRD cache daemon
 
 The `rrd::cache` class has the following parameters:
 

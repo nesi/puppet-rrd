@@ -4,12 +4,6 @@
   "summary": "A Puppet Module to install and configure the Round Robin Database tools, cache and bindings.",
   "author": "Aethylred",
   "description": "This is a Puppet Module for installing and configuring the [Round Robin Database](http://oss.oetiker.ch/rrdtool/) tools, cache, and bindings.",
-  "dependencies": [
-    {
-      "name": "puppetlabs/stdlib",
-      "version_requirement": ">=3.2.0 <5.0.0"
-    }
-  ],
   "source": "https://github.com/nesi/puppet-rrd",
   "project_page": "https://github.com/nesi/puppet-rrd",
   "issues_url": "https://github.com/nesi/puppet-rrd/issues",
