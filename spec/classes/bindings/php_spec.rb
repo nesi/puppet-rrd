@@ -15,6 +15,17 @@ describe 'rrd::bindings::php', :type => :class do
           end
         end
       end
+      describe "when ensure is absent" do
+        let :params do
+            { :ensure => 'absent'}
+          end
+        it { should contain_class('rrd::params') }
+        if expects[:php_packages]
+          Array(expects[:php_packages]).each do | package |
+            it { should contain_package(package).with_ensure('absent') }
+          end
+        end
+      end
     end
   end
 end

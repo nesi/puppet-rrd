@@ -15,6 +15,17 @@ describe 'rrd::bindings::tcl', :type => :class do
           end
         end
       end
+      describe "when ensure is absent" do
+        let :params do
+            { :ensure => 'absent'}
+          end
+        it { should contain_class('rrd::params') }
+        if expects[:tcl_packages]
+          Array(expects[:tcl_packages]).each do | package |
+            it { should contain_package(package).with_ensure('absent') }
+          end
+        end
+      end
     end
   end
 end
