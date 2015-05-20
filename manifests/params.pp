@@ -13,7 +13,7 @@ class rrd::params {
   $cache_maxwait          = '30'
 
   case $::osfamily {
-    Debian:{
+    'Debian':{
       $lib_package      = 'librrd4'
       $tool_package     = 'rrdtool'
       $cache_package    = 'rrdcached'
@@ -22,6 +22,18 @@ class rrd::params {
       $perl_packages    = ['librrds-perl','librrdp-perl','librrdtool-oo-perl']
       $tcl_packages     = ['rrdtool-tcl']
       $php_packages     = ['php5-rrd']
+      $cache_conf_file  = '/etc/default/rrdcached'
+      $cache_service    = 'rrdcached'
+    }
+    'RedHat':{
+      $lib_package      = undef
+      $tool_package     = 'rrdtool'
+      $cache_package    = 'rrdcached'
+      $ruby_packages    = 'rrdtool-ruby'
+      $python_packages  = 'rrdtool-python'
+      $perl_packages    = 'rrdtool-perl'
+      $tcl_packages     = 'rrdtool-tcl'
+      $php_packages     = 'rrdtool-php'
       $cache_conf_file  = '/etc/default/rrdcached'
       $cache_service    = 'rrdcached'
     }
