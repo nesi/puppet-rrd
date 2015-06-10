@@ -1,6 +1,6 @@
 {
   "name": "Aethylred-rrd",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A Puppet Module to install and configure the Round Robin Database tools, cache and bindings.",
   "author": "Aethylred",
   "description": "This is a Puppet Module for installing and configuring the [Round Robin Database](http://oss.oetiker.ch/rrdtool/) tools, cache, and bindings.",

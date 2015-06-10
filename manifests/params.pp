@@ -14,7 +14,7 @@ class rrd::params {
 
   case $::osfamily {
     'Debian':{
-      $lib_package      = 'librrd4'
+      $lib_package      = ['librrd4','librrd-dev']
       $tool_package     = 'rrdtool'
       $cache_package    = 'rrdcached'
       $ruby_packages    = ['librrd-ruby']

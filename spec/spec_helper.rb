@@ -44,7 +44,7 @@ $supported_os = on_supported_os.map do |os, facts|
   case facts[:osfamily]
   when 'Debian'
     expects.merge!( {
-      :lib_package      => 'librrd4',
+      :lib_package      => ['librrd4','librrd-dev'],
       :tool_package     => 'rrdtool',
       :cache_package    => 'rrdcached',
       :ruby_packages    => ['librrd-ruby'],
